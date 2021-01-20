@@ -1,0 +1,17 @@
+body.dark-mode {
+  background-color: black;
+  color: whitesmoke;
+}
+body.light-mode {
+  background-color: white;
+  color: black;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+* {
+  box-sizing: border-box;
+}
