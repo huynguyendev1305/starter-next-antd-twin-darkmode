@@ -1,13 +1,16 @@
 import "antd/dist/antd.css";
-import { GlobalStyles } from "twin.macro";
+import "../utils/typography.css";
 import "../styles/globals.css";
+import { AnimatePresence, motion } from "framer-motion";
+import Layout from "../components/Layout.js";
 
-function MyApp({ Component, pageProps }) {
+function MyApp({ Component, pageProps, router }) {
   return (
-    <>
-      <GlobalStyles />
-      <Component {...pageProps} />
-    </>
+    <AnimatePresence exitBeforeEnter>
+      <Layout key={router.route}>
+        <Component {...pageProps} />
+      </Layout>
+    </AnimatePresence>
   );
 }
 
