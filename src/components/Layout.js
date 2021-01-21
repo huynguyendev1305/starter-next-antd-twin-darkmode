@@ -2,10 +2,13 @@ import React from "react";
 import { motion } from "framer-motion";
 import { pageVariants, pageTransition } from "../animations/pageAnimation.js";
 import tw from "twin.macro";
+import { DefaultSeo } from "next-seo";
+import SEO from "../utils/next-seo-config.js";
 
 const Layout = ({ children }) => {
   return (
     <div className="App">
+      <DefaultSeo {...SEO}></DefaultSeo>
       <header className="AppHeader">Header</header>
       <main className="AppMain">
         <motion.div
